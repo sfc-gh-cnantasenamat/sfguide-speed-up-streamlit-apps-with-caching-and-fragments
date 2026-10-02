@@ -49,7 +49,18 @@ In Streamlit in Snowflake, `load_events()` queries a `USER_EVENTS_DEMO` table th
 snow sql -f setup.sql
 ```
 
-The cleanup statements are commented out at the end of the file.
+## Clean up
+
+To remove the Snowflake objects that `setup.sql` created, run the DROP statements at the end of the file in the same database and schema:
+
+```sql
+DROP STREAMLIT IF EXISTS USER_ACTIVITY_BEFORE;
+DROP STREAMLIT IF EXISTS USER_ACTIVITY_AFTER;
+DROP STAGE IF EXISTS ST_CACHING_STAGE;
+DROP TABLE IF EXISTS USER_EVENTS_DEMO;
+```
+
+To stop the local apps, press `Ctrl+C` in each terminal. To remove a Community Cloud app, open its menu in your workspace and choose **Delete**.
 
 ## License
 
