@@ -36,7 +36,7 @@ Each app has a **Reset cache** button and a **Run timing** panel. Click **Reset 
 
 ## Load from Snowflake
 
-The apps pick their data source based on where they run. Locally or on Streamlit Community Cloud, they read the bundled CSV, so no credentials are needed. In Streamlit in Snowflake, `load_events()` queries a `USER_EVENTS_DEMO` table through the app's Snowpark session. Load `data/user_events.csv` into that table before deploying. `load_filtered()` and `load_mau()` don't change.
+The apps pick their data source based on where they run. Locally or on Streamlit Community Cloud, they read the bundled CSV, so no credentials are needed. In Streamlit in Snowflake, `load_events()` queries a `USER_EVENTS_DEMO` table through the app's Snowpark session. Load `data/user_events.csv` into that table before deploying. Deploy on the container runtime with an external access integration that allows PyPI, so it can install the packages in `pyproject.toml`. `load_filtered()` and `load_mau()` don't change.
 
 ## License
 
